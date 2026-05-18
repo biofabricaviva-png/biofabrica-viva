@@ -10,16 +10,32 @@
 
     <nav class="bg-green-700 text-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img src="Logo BioFabrica.png" alt="Logo Biofábrica Viva" class="h-10 w-auto object-contain bg-white rounded-full p-1 shadow-sm">
-                <span class="font-bold text-xl tracking-tight">Biofábrica Viva</span>
+            
+            <div class="flex items-center space-x-2 md:space-x-3">
+                <img src="Logo BioFabrica.png" alt="Logo Biofábrica Viva" class="h-9 md:h-10 w-auto object-contain bg-white rounded-full p-1 shadow-sm">
+                <span class="font-bold text-lg md:text-xl tracking-tight">Biofábrica Viva</span>
             </div>
-            <div class="space-x-6">
-                <a href="index.html" class="hover:text-green-200 transition">Inicio</a>
-                <a href="marco-teorico.html" class="text-green-200 font-semibold">Marco Teórico</a>
+
+            <button class="md:hidden text-white focus:outline-none p-1 rounded hover:bg-green-600 transition" 
+                    onclick="document.getElementById('menu-desplegable').classList.toggle('hidden')">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-green-200 font-semibold">Inicio</a>
+                <a href="marco-teorico.html" class="hover:text-green-200 transition">Marco Teórico</a>
                 <a href="metodologia.html" class="hover:text-green-200 transition">Metodología</a>
                 <a href="avance-mensual.html" class="bg-green-600 px-3 py-2 rounded-md hover:bg-green-500 transition">Avances Mensuales</a>
             </div>
+        </div>
+
+        <div id="menu-desplegable" class="hidden md:hidden bg-green-800 border-t border-green-600 px-4 py-3 space-y-2 animate-fade-in">
+            <a href="index.html" class="block text-green-200 font-semibold py-2 border-b border-green-700/50">Inicio</a>
+            <a href="marco-teorico.html" class="block text-white hover:text-green-200 transition py-2 border-b border-green-700/50">Marco Teórico</a>
+            <a href="metodologia.html" class="block text-white hover:text-green-200 transition py-2 border-b border-green-700/50">Metodología</a>
+            <a href="avance-mensual.html" class="block bg-green-600 text-center text-white px-3 py-2 rounded-md hover:bg-green-500 transition font-medium mt-3 shadow-md">Avances Mensuales</a>
         </div>
     </nav>
 
